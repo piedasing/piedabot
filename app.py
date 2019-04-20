@@ -8,6 +8,8 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
+from weather import weather
+
 app = Flask(__name__)
 
 # Channel Access Token
@@ -33,7 +35,7 @@ def callback():
 # 處理訊息
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    message = TextSendMessage(text=event.message.text)
+    message = TextSendMessage(text=weather(event.message.text))
     line_bot_api.reply_message(event.reply_token, message)
 
 import os
