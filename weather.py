@@ -15,23 +15,3 @@ def weather(area):
         content = title.split("<br/><br/>")[2]
 
     return content
-
-# import requests
-# from bs4 import BeautifulSoup
-
-# # 下載 Yahoo 首頁內容
-# r = requests.get('https://www.cwb.gov.tw/V8/C/')
-
-# # 確認是否下載成功
-# if r.status_code == requests.codes.ok:
-#   # 以 BeautifulSoup 解析 HTML 程式碼
-#   soup = BeautifulSoup(r.text, 'html.parser')
-
-#   # 以 CSS 的 class 抓出各類頭條新聞
-#   weather = soup.findAll('div', attrs={'class', 'cube_weather'})
-#   print(weather)
-#   # for s in stories:
-#   #   # 新聞標題
-#   #   print("標題：" + s.text)
-#   #   # 新聞網址
-#   #   print("網址：" + s.get('href'))
