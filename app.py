@@ -8,8 +8,6 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-from weather import weather
-
 app = Flask(__name__)
 
 # Channel Access Token
